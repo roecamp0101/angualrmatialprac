@@ -1,20 +1,140 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<button mat-button color="primary">Click me</button>
+<button mat-raised-button color="warn">please click me</button>
+<button mat-raised-button>Click me</button>
+<button mat-icon-button>
+  <i class="material-icons">
+  camera_enhance
+  </i>
+</button>
+<br>
+<button mat-fab>Click Me please</button>
+<button mat-mini-fab color="primary">Clicke</button>
+<button mat-stroked-button color="warn">coolr</button>
+<button mat-flat-button>sadfsadf</button>
+<br><br>
+<button mat-icon-button class="blk-border "
+matTooltip="Info about the action"
+ matTooltipPosition="above"
+>
+  <mat-icon color="primary">home</mat-icon>
+</button>
+<br><br>
 
+<button mat-flat-button color="primary">
+  please on me
+  <mat-icon color="warn">home</mat-icon>
+</button>
+
+<br><br>
+
+<button mat-icon-button color="primary">
+ <mat-icon color="primary">airplay</mat-icon>
+</button>
+
+<form action="">
+
+  <mat-grid-list cols="2" rowHeight="100px" gutterSize="0px">
+    <mat-grid-tile  colspan="1">
+      <mat-form-field class="w-50">
+         <input class="" matInput placeholder="Input">
+       </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile   colspan="1">
+      <mat-form-field class="w-50">
+         <input class="" matInput placeholder="Input">
+       </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-grid-list cols="4" rowHeight="100px" gutterSize="0px">
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-tile>5</mat-grid-tile>
+    <mat-grid-tile colspan="2">6</mat-grid-tile>
+  </mat-grid-list>
+
+</form>
+
+
+<br><br>
+
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Personal data
+      </mat-panel-title>
+      <mat-panel-description>
+        Type your name and age
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="First name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Age">
+    </mat-form-field>
+  </mat-expansion-panel>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel>
+</mat-accordion>
+
+
+<br><br>
+
+  <mat-button-toggle value="bold" #toggleBtn checked>Bold</mat-button-toggle>
+  {{toggleBtn.checked}}
+<br><br>
+
+<mat-card>
+<mat-card-title>
+  Simple Card
+  </mat-card-title>
+  <mat-card-content>
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic excepturi consequuntur neque possimus incidunt esse maiores sapiente labore atque dignissimos perspiciatis, voluptas ullam odio asperiores, aut corrupti voluptate officiis, maxime?
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button> click me</button>
+    </mat-card-actions>
+
+</mat-card>
+
+
+<br><br>
+
+<mat-tab-group>
+  <mat-tab label="First"> Content 1 </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+
+
+<br><br>
+<mat-toolbar color="primary" class="navbar">
+ <div>Chillen</div>
+
+<div>
+  <span>so it go</span>
+  <span> right till</span>
+  <span> wowo</span>
+</div>
+</mat-toolbar>
+
+<br><br>
+
+
+
+<router-outlet></router-outlet>

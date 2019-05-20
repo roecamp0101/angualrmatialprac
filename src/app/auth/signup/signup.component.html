@@ -1,0 +1,24 @@
+<section>
+    <form class="cool" fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <mat-form-field class="example-full-width">
+        <input matNativeControl type="email" matInput  placeholder="Email" ngModel name="email" email required
+        #email="ngModel">
+        <mat-error *ngIf="email">Email needs to be entered...homie</mat-error>
+        <mat-error>Wow doog you need to put something in here...</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matNativeControl type="password" matInput  placeholder="Password" ngModel name="password" required maxlength="6"
+      #pwdInp>
+      <mat-hint align="start">Remember only 6 Characters {{pwdInp.value?.length}}</mat-hint>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Go Shorty? What's your birthday" [max]="maxDate">
+    <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+    <mat-checkbox labelPosition="before" name="checkme" color="primary" required>Check me!</mat-checkbox>
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+    </form>
+
+
+</section>

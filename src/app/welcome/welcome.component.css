@@ -1,0 +1,18 @@
+mat-sidenav-container, mat-sidenav, mat-sidenav-content {
+  height: 100%;
+}
+
+mat-sidenav{
+  width: 250px;
+}
+
+
+.blk-border{
+  border: 1px solid black;
+}
+
+
+.example-card{
+  max-width: 300px;
+  margin: 10px 0;
+}

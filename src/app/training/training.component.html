@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+  <span><button mat-raised-button (click)="toggleSidenav()" class="mr-4">Toggle Opended</button></span>
+  <span><button mat-raised-button (click)="sidenav.open()"  class="mr-4">Open Side Nav</button></span>
+  <span><button mat-raised-button (click)="sidenav.close()" class="mr-4">Close Side Nav</button></span>
+  <span><button mat-raised-button (click)="sidenav.toggle()">Toggle Side Nav</button></span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [(opened)]="opened" mode="side">Start</mat-sidenav>
+  <mat-sidenav-content>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="submenu">Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+<button mat-flat-button [matMenuTriggerFor]="menu">Menu</button>
+
+
+<mat-menu #submenu="matMenu">
+  <button mat-menu-item>Car 1</button>
+  <button mat-menu-item>Car 2</button>
+</mat-menu>
+
+
+<mat-nav-list dense>
+    <a mat-list-item href="#"> Orials</a>
+    <a mat-list-item href="#"> Joe</a>
+    <a mat-list-item href="#"> Takashie </a>
+</mat-nav-list>
+
+<mat-divider></mat-divider>
+
+<mat-list>
+  <mat-list-item>
+    <h3 matLine> uiuoiu </h3>
+    <p matLine>
+      <span> kjklj </span>
+      <span class="demo-2"> jkkkkj </span>
+    </p>
+  </mat-list-item>
+</mat-list>
+
+
+<mat-grid-list cols="6" rowHeight="50px" gutterSize="20px">
+  <mat-grid-tile colspan="3">1</mat-grid-tile>
+  <mat-grid-tile colspan=3>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+  <mat-grid-tile>5</mat-grid-tile>
+  <mat-grid-tile colspan="2">6</mat-grid-tile>
+</mat-grid-list>
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
